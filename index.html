@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arun Bhojanalay – Swad Jo Dil Jeet Le | Hapur Dhaba</title>
+  <meta name="description" content="Arun Bhojanalay – Authentic North Indian Dhaba in Hapur. Famous for Chole Bhature, Dal Chawal, Chole Chawal & Aloo-Poori. Order on WhatsApp: 7409010714" />
+  <meta property="og:title" content="Arun Bhojanalay – Swad Jo Dil Jeet Le" />
+  <meta property="og:description" content="Authentic North Indian Dhaba food in Hapur. Order on WhatsApp!" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #FFF8F0;
+      color: #2d1a0e;
+      min-height: 100vh;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: linear-gradient(90deg, #7B1F00, #C0391B);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+    .navbar-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav-brand .icon { font-size: 26px; }
+    .nav-brand .name {
+      color: #fff;
+      font-weight: 800;
+      font-size: 18px;
+      line-height: 1.1;
+      display: block;
+    }
+    .nav-brand .sub {
+      color: #FFCBA4;
+      font-size: 12px;
+    }
+    .nav-wa {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #25D366;
+      color: #fff;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 9px 20px;
+      border-radius: 50px;
+      transition: background 0.2s;
+    }
+    .nav-wa:hover { background: #1ebe5a; }
+    .nav-wa svg { width: 18px; height: 18px; }
+    .nav-wa-text { display: inline; }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(135deg, #7B1F00 0%, #C0391B 35%, #E05D2A 65%, #F2A63A 100%);
+      position: relative;
+      overflow: hidden;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .hero-content { position: relative; z-index: 2; max-width: 700px; margin: 0 auto; }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 7px 18px;
+      border-radius: 50px;
+      margin-bottom: 22px;
+      backdrop-filter: blur(6px);
+    }
+    .hero-badge span { font-size: 18px; }
+    .hero h1 {
+      font-size: clamp(36px, 7vw, 64px);
+      font-weight: 900;
+      color: #fff;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      line-height: 1.1;
+      margin-bottom: 14px;
+    }
+    .hero-hindi {
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      font-size: clamp(22px, 4vw, 36px);
+      font-weight: 900;
+      color: #FFD700;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      margin-bottom: 14px;
+    }
+    .hero-sub {
+      color: rgba(255,255,255,0.80);
+      font-size: 17px;
+      margin-bottom: 36px;
+      line-height: 1.6;
+    }
+    .hero-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    .btn-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #25D366;
+      color: #fff;
+      font-weight: 800;
+      font-size: 18px;
+      padding: 16px 34px;
+      border-radius: 18px;
+      box-shadow: 0 6px 30px rgba(37,211,102,0.45);
+      transition: background 0.2s, transform 0.2s;
+      animation: pulse-green 2s infinite;
+    }
+    .btn-wa:hover { background: #1ebe5a; transform: translateY(-2px); }
+    .btn-wa svg { width: 26px; height: 26px; }
+    .btn-call {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.35);
+      color: #fff;
+      font-weight: 800;
+      font-size: 18px;
+      padding: 16px 34px;
+      border-radius: 18px;
+      backdrop-filter: blur(6px);
+      transition: background 0.2s;
+    }
+    .btn-call:hover { background: rgba(255,255,255,0.25); }
+    .btn-call svg { width: 22px; height: 22px; }
+    .hero-loc {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.70);
+      font-size: 14px;
+    }
+    .hero-loc svg { width: 16px; height: 16px; color: #FFD700; flex-shrink: 0; }
+    .hero-deco {
+      position: absolute;
+      font-size: 70px;
+      opacity: 0.15;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    @keyframes pulse-green {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.45); }
+      50% { box-shadow: 0 0 0 14px rgba(37,211,102,0); }
+    }
+
+    /* ===== DIVIDER ===== */
+    .divider {
+      height: 4px;
+      background: linear-gradient(90deg, #E05D2A, #F2A63A, #E05D2A);
+      border: none;
+    }
+
+    /* ===== MENU ===== */
+    .menu-section {
+      padding: 70px 20px;
+      background: linear-gradient(180deg, #FFF8F0, #FFF3E0);
+    }
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #E05D2A;
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+    }
+    .section-label svg { width: 18px; height: 18px; }
+    .section-title {
+      font-size: clamp(26px, 5vw, 40px);
+      font-weight: 900;
+      color: #1a0a00;
+      margin-bottom: 10px;
+    }
+    .section-title span { color: #E05D2A; }
+    .section-sub { color: #8a6245; font-size: 16px; max-width: 440px; margin: 0 auto 50px; line-height: 1.6; }
+    .text-center { text-align: center; }
+    .inner { max-width: 1100px; margin: 0 auto; }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 24px;
+    }
+    .menu-card {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border: 1px solid #fde8cc;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .menu-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.14); }
+    .menu-img {
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 75px;
+    }
+    .menu-img-1 { background: linear-gradient(135deg, #f97316, #ea580c); }
+    .menu-img-2 { background: linear-gradient(135deg, #facc15, #ca8a04); }
+    .menu-img-3 { background: linear-gradient(135deg, #f59e0b, #b45309); }
+    .menu-img-4 { background: linear-gradient(135deg, #f87171, #f97316); }
+    .menu-body { padding: 20px; }
+    .menu-body h3 { font-weight: 800; font-size: 18px; color: #1a0a00; margin-bottom: 8px; }
+    .menu-body p { color: #8a6245; font-size: 14px; line-height: 1.6; }
+
+    .cta-center { text-align: center; margin-top: 44px; }
+    .btn-orange {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, #E05D2A, #C0391B);
+      color: #fff;
+      font-weight: 800;
+      font-size: 18px;
+      padding: 16px 40px;
+      border-radius: 18px;
+      box-shadow: 0 6px 24px rgba(192,57,27,0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-orange:hover { transform: scale(1.04); box-shadow: 0 10px 30px rgba(192,57,27,0.45); }
+    .btn-orange svg { width: 24px; height: 24px; }
+
+    /* ===== WHATSAPP + QR ===== */
+    .wa-section { padding: 70px 20px; background: #fff; }
+    .wa-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+    @media (max-width: 720px) { .wa-grid { grid-template-columns: 1fr; } }
+    .wa-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #dcfce7;
+      color: #166534;
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 6px 16px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+    }
+    .wa-badge svg { width: 16px; height: 16px; }
+    .wa-title {
+      font-size: clamp(22px, 4vw, 36px);
+      font-weight: 900;
+      color: #1a0a00;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .wa-title span { color: #25D366; }
+    .wa-desc { color: #8a6245; font-size: 17px; margin-bottom: 30px; line-height: 1.6; }
+    .btn-wa-big {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      background: #25D366;
+      color: #fff;
+      font-weight: 800;
+      font-size: 20px;
+      padding: 18px 38px;
+      border-radius: 18px;
+      box-shadow: 0 6px 30px rgba(37,211,102,0.40);
+      transition: background 0.2s, transform 0.2s;
+      animation: pulse-green 2s infinite;
+    }
+    .btn-wa-big:hover { background: #1ebe5a; transform: translateY(-2px); }
+    .btn-wa-big svg { width: 30px; height: 30px; }
+    .wa-num { margin-top: 14px; color: #aaa; font-size: 14px; }
+    .wa-num strong { color: #555; }
+
+    .qr-card {
+      background: linear-gradient(135deg, #fff8f0, #fff3e0);
+      border: 2px solid #fde8cc;
+      border-radius: 22px;
+      padding: 36px 30px;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    }
+    .qr-card-head {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .qr-card-head svg { width: 22px; height: 22px; color: #E05D2A; }
+    .qr-card-head h3 { font-weight: 800; font-size: 18px; color: #5a2d00; }
+    .qr-img-wrap {
+      background: #fff;
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: inset 0 2px 8px rgba(0,0,0,0.06);
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+    .qr-img-wrap img { width: 180px; height: 180px; border-radius: 8px; display: block; }
+    .qr-caption { color: #5a2d00; font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+    .qr-hint { color: #aaa; font-size: 12px; }
+
+    /* ===== CONTACT ===== */
+    .contact-section {
+      padding: 70px 20px;
+      background: linear-gradient(135deg, #7B1F00 0%, #C0391B 60%, #E05D2A 100%);
+      text-align: center;
+    }
+    .contact-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 6px 18px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+      backdrop-filter: blur(4px);
+    }
+    .contact-badge svg { width: 16px; height: 16px; color: #FFD700; }
+    .contact-title { font-size: clamp(24px, 5vw, 40px); font-weight: 900; color: #fff; margin-bottom: 10px; }
+    .contact-sub { color: rgba(255,255,255,0.70); font-size: 17px; margin-bottom: 44px; }
+    .contact-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 700px;
+      margin: 0 auto 44px;
+    }
+    @media (max-width: 600px) { .contact-cards { grid-template-columns: 1fr; } }
+    .contact-card {
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.20);
+      border-radius: 20px;
+      padding: 28px 24px;
+      text-align: left;
+      backdrop-filter: blur(6px);
+    }
+    .contact-card-head { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+    .cc-icon {
+      width: 48px;
+      height: 48px;
+      background: #FFD700;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .cc-icon svg { width: 24px; height: 24px; color: #7B1F00; }
+    .cc-label { color: rgba(255,255,255,0.60); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
+    .cc-name { color: #fff; font-weight: 800; font-size: 17px; }
+    .contact-card p { color: rgba(255,255,255,0.80); font-size: 15px; line-height: 1.6; }
+    .contact-card .highlight { color: #FFD700; font-weight: 700; font-size: 20px; }
+
+    .contact-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+    .btn-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #fff;
+      color: #C0391B;
+      font-weight: 800;
+      font-size: 17px;
+      padding: 16px 34px;
+      border-radius: 18px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+      transition: transform 0.2s;
+    }
+    .btn-white:hover { transform: translateY(-2px); }
+    .btn-white svg { width: 22px; height: 22px; }
+    .btn-green-solid {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #25D366;
+      color: #fff;
+      font-weight: 800;
+      font-size: 17px;
+      padding: 16px 34px;
+      border-radius: 18px;
+      box-shadow: 0 6px 24px rgba(37,211,102,0.35);
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-green-solid:hover { background: #1ebe5a; transform: translateY(-2px); }
+    .btn-green-solid svg { width: 22px; height: 22px; }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: #4A1000;
+      padding: 32px 20px;
+      text-align: center;
+    }
+    .footer-brand { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px; }
+    .footer-brand span { font-size: 24px; }
+    .footer-brand strong { color: #fff; font-size: 18px; font-weight: 800; }
+    .footer-addr { color: #ffb07a; font-size: 14px; margin-bottom: 6px; }
+    .footer-copy { color: rgba(255,128,64,0.50); font-size: 12px; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 640px) {
+      .hero { padding: 60px 16px; }
+      .hero-btns { flex-direction: column; align-items: center; }
+      .btn-wa, .btn-call, .btn-wa-big { width: 100%; justify-content: center; }
+      .nav-wa-text { display: none; }
+      .wa-section { padding: 50px 16px; }
+      .menu-section { padding: 50px 16px; }
+      .contact-section { padding: 50px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <div class="nav-brand">
+        <span class="icon">🍽️</span>
+        <div>
+          <span class="name">Arun Bhojanalay</span>
+          <span class="sub">Havya Dhaba – Hapur</span>
+        </div>
+      </div>
+      <a href="https://wa.me/917409010714" target="_blank" rel="noopener noreferrer" class="nav-wa">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span class="nav-wa-text">WhatsApp</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <!-- Decorative emojis -->
+    <span class="hero-deco" style="top:10%;left:3%">🍛</span>
+    <span class="hero-deco" style="bottom:10%;right:3%">🥘</span>
+    <span class="hero-deco" style="top:20%;right:8%;font-size:50px">🍚</span>
+    <span class="hero-deco" style="bottom:18%;left:8%;font-size:50px">🫓</span>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span>👨‍🍳</span> Authentic North Indian Dhaba
+      </div>
+      <h1>Arun Bhojanalay</h1>
+      <div class="hero-hindi">स्वाद जो दिल जीत ले</div>
+      <p class="hero-sub">Swad Jo Dil Jeet Le — Taste that wins your heart, every single time.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/917409010714?text=Namaste!%20I%20want%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer" class="btn-wa">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Order on WhatsApp
+        </a>
+        <a href="tel:7409010714" class="btn-call">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z"/></svg>
+          Call Now
+        </a>
+      </div>
+      <div class="hero-loc">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Bulandshahr Road, Hapur — Havya Dhaba
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- MENU -->
+  <section class="menu-section">
+    <div class="inner">
+      <div class="text-center">
+        <div class="section-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 002-2V2M7 2v20M21 15V2v0a5 5 0 00-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg>
+          Our Specialities
+        </div>
+        <h2 class="section-title">Hamara <span>Menu</span></h2>
+        <p class="section-sub">Fresh, homestyle cooking made with love — the real taste of North India</p>
+      </div>
+
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="menu-img menu-img-1">🍛</div>
+          <div class="menu-body">
+            <h3>Chole Bhature</h3>
+            <p>Fluffy fried bread with spiced chickpea curry — a North Indian classic that never disappoints.</p>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-img menu-img-2">🍚</div>
+          <div class="menu-body">
+            <h3>Dal Chawal</h3>
+            <p>Comforting lentil dal with steamed basmati rice — pure homestyle taste in every bite.</p>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-img menu-img-3">🥘</div>
+          <div class="menu-body">
+            <h3>Chole Chawal</h3>
+            <p>Hearty chickpea curry served over fluffy steamed rice — simple, filling, and delicious.</p>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-img menu-img-4">🫓</div>
+          <div class="menu-body">
+            <h3>Aloo-Poori</h3>
+            <p>Golden deep-fried poori with spiced potato sabzi — a timeless morning favourite.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-center">
+        <a href="https://wa.me/917409010714?text=Namaste!%20I%20want%20to%20order%20food." target="_blank" rel="noopener noreferrer" class="btn-orange">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Order Now on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- WHATSAPP + QR -->
+  <section class="wa-section">
+    <div class="inner">
+      <div class="wa-grid">
+        <!-- Left: WhatsApp CTA -->
+        <div>
+          <div class="wa-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Order
+          </div>
+          <h2 class="wa-title">Order Easily on <span>WhatsApp!</span></h2>
+          <p class="wa-desc">Just send us a message and we'll get your favourite food ready. Fast, simple, and direct!</p>
+          <a href="https://wa.me/917409010714?text=Namaste!%20I%20would%20like%20to%20order%20food." target="_blank" rel="noopener noreferrer" class="btn-wa-big">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Order on WhatsApp
+          </a>
+          <p class="wa-num">Number: <strong>+91 74090 10714</strong></p>
+        </div>
+
+        <!-- Right: QR Code -->
+        <div style="display:flex;justify-content:center;">
+          <div class="qr-card" style="width:100%;max-width:320px;">
+            <div class="qr-card-head">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              <h3>Scan to Chat</h3>
+            </div>
+            <div class="qr-img-wrap">
+              <img
+                src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fwa.me%2F917409010714%3Ftext%3DNamaste!%2520I%2520want%2520to%2520order%2520food.&color=1B7A34&bgcolor=FFFFFF&qzone=2"
+                alt="WhatsApp QR Code for Arun Bhojanalay"
+                onerror="this.style.display='none';this.parentElement.innerHTML='<div style=\'width:180px;height:180px;background:#f5f5f5;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#aaa;font-size:13px;\'><span style=\'font-size:40px;\'>📱</span>QR Code</div>'"
+              />
+            </div>
+            <p class="qr-caption">Scan to Chat with us on WhatsApp</p>
+            <p class="qr-hint">Point your phone camera at the code above</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- CONTACT & LOCATION -->
+  <section class="contact-section">
+    <div class="inner">
+      <div class="contact-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Find Us
+      </div>
+      <h2 class="contact-title">Hamare Paas Aayein</h2>
+      <p class="contact-sub">Come visit us for a wholesome North Indian meal!</p>
+
+      <div class="contact-cards">
+        <div class="contact-card">
+          <div class="contact-card-head">
+            <div class="cc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="cc-label">Location</div>
+              <div class="cc-name">Arun Bhojanalay</div>
+            </div>
+          </div>
+          <p>Bulandshahr Road, Hapur<br/><span class="highlight">Havya Dhaba</span></p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-head">
+            <div class="cc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z"/></svg>
+            </div>
+            <div>
+              <div class="cc-label">Contact</div>
+              <div class="cc-name">Call or WhatsApp</div>
+            </div>
+          </div>
+          <p><span class="highlight">+91 74090 10714</span></p>
+        </div>
+      </div>
+
+      <div class="contact-btns">
+        <a href="tel:7409010714" class="btn-white">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z"/></svg>
+          Call Now: 74090 10714
+        </a>
+        <a href="https://wa.me/917409010714?text=Namaste!%20I%20want%20to%20order%20food." target="_blank" rel="noopener noreferrer" class="btn-green-solid">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-brand">
+      <span>🍽️</span>
+      <strong>Arun Bhojanalay</strong>
+    </div>
+    <p class="footer-addr">Bulandshahr Road, Hapur | Havya Dhaba</p>
+    <p class="footer-copy">© 2025 Arun Bhojanalay. Made with ❤️ for food lovers.</p>
+  </footer>
+
+</body>
+</html>
